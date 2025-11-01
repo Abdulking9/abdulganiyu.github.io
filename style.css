@@ -1,0 +1,192 @@
+:root {
+  --blue: #0066cc;
+  --border: #ddd;
+  --text: #222;
+  --bg: #fff;
+  --muted: #555;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  width: min(920px, 95%);
+  margin: 0 auto;
+}
+
+.topbar {
+  background: #0f172a;
+  color: #fff;
+  padding: 0.55rem 0;
+  font-size: 0.85rem;
+}
+
+.site-title {
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  padding: 1.4rem 0 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.photo-box img {
+  width: 130px;
+  height: 160px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  background: #eee;
+}
+
+.profile {
+  flex: 1;
+}
+
+.name {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0.3rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.contact {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.opening {
+  color: #c53030;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  background: #fafafa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav a {
+  font-size: 0.85rem;
+}
+
+.section {
+  padding: 1.6rem 0 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.paper {
+  margin-bottom: 1.2rem;
+}
+
+.paper h3 {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.links a {
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.proj-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.proj-table th,
+.proj-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem 0.4rem;
+  vertical-align: top;
+}
+
+.proj-table th {
+  background: #f5f5f5;
+  text-align: left;
+}
+
+.footer {
+  font-size: 0.75rem;
+  color: #777;
+  padding: 1.2rem 0 2rem;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo-box img {
+    width: 110px;
+    height: 140px;
+  }
+
+  .nav {
+    gap: 0.6rem;
+  }
+
+  .proj-table,
+  .proj-table thead {
+    display: block;
+  }
+
+  .proj-table tr {
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  .proj-table td,
+  .proj-table th {
+    display: block;
+    width: 100%;
+  }
+}
